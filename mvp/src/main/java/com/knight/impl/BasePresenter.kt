@@ -14,38 +14,26 @@ import com.knight.mvp.IPresenter
  * version: v 1.0
  */
 abstract class BasePresenter<out V : IMvpView<BasePresenter<V>>> : IPresenter<V> {
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
 
-    override fun onViewStateRestored(savedInstanceState: Bundle?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-    override fun onStart() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override lateinit var view: @UnsafeVariance V
 
-    override fun onResume() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onConfigurationChanged(newConfig: Configuration) = Unit
 
-    override fun onPause() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onCreate(savedInstanceState: Bundle?) = Unit
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onViewStateRestored(savedInstanceState: Bundle?) = Unit
 
-    override fun onStop() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-    override fun onDestroy() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onStart() = Unit
+
+    override fun onResume() = Unit
+
+    override fun onPause() = Unit
+
+    override fun onSaveInstanceState(outState: Bundle) = Unit
+
+    override fun onStop() = Unit
+
+    override fun onDestroy() = Unit
 
 }
